@@ -39,6 +39,10 @@
                     </li>
                 </ul>
             </div>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
+                Login
+            </button>
+            
         </nav>
     </header>
     <main>
@@ -65,10 +69,12 @@
                     <p>Esta é uma página de exemplo simples com um layout semelhante ao GitHub..
                     </p>
                     <div class="spinner"></div>
-                </section>           
+                </section>
             </div>
         </div>
     </main>
+
+
     <footer class="bg-dark text-white py-3">
         <div class="continer">
             <p>© 2023 Página estilo GitHub. Todos os direitos reservados..</p>
@@ -77,6 +83,41 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="Script/limparModol.js"></script>
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword"
+                                placeholder="Digite sua senha">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
