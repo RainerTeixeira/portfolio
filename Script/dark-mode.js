@@ -1,17 +1,31 @@
 const chk = document.getElementById('chk');
-const isDarkMode = localStorage.getItem('darkMode');
+let isSystemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+let isUserDarkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-// verifica se o modo escuro foi definido anteriormente
-if (isDarkMode === 'true') {
+if (isSystemDarkMode && (isUserDarkMode === null || isUserDarkMode)) {
+  document.body.classList.add('dark');
+  chk.checked = true;
+} else if (isUserDarkMode) {
   document.body.classList.add('dark');
   chk.checked = true;
 }
 
 chk.addEventListener('change', () => {
   document.body.classList.toggle('dark');
-  // salva o status do modo escuro no localStorage
   localStorage.setItem('darkMode', chk.checked);
+  isUserDarkMode = chk.checked;
 });
 
-
-
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  isSystemDarkMode = e.matches;
+  if (isSystemDarkMode && (isUserDarkMode === null || isUserDarkMode)) {
+    document.body.classList.add('dark');
+    chk.checked = true;
+  } else if (!isSystemDarkMode && isUserDarkMode) {
+    document.body.classList.add('dark');
+    chk.checked = true;
+  } else {
+    document.body.classList.remove('dark');
+    chk.checked = false;
+  }
+});
