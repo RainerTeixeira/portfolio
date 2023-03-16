@@ -1,12 +1,23 @@
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
 .profile img {
   max-width: 150px;
 }
 
 nav.nav {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
