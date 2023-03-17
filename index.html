@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark"
-    data-a11y-animated-images="system">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Página de exemplo com um layout semelhante ao GitHub.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rainer Teixeira Page</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-
     <header class="bg-dark text-white">
-        <nav class="container navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="#">GitHub-style Page</a>
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand" href="#">Rainer Teixeira</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,27 +41,25 @@
                         <a class="nav-link" href="#">Explorar</a>
                     </li>
                 </ul>
-                <div class="d-flex align-items-center ml-auto" id="navbarNav">
+
+                <div class="d-flex align-items-center ml-auto button-group">
                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
                         Login
                     </button>
-                    
+
                     <div class="form-check">
-                  <input type="checkbox" class="checkbox" id="chk" />
-                  <label class="label" for="chk">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                    <div class="ball"></div>
-                  </label>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
                 </div>
-              </div>
-              
-
-          <script src="Script/dark-mode"></script>
-          <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-
+            </div>
         </nav>
     </header>
+
     <main>
         <div class="container">
             <div class="row">
@@ -84,8 +81,7 @@
                 </aside>
                 <section class="col-md-9">
                     <h1>Bem vindo a minha pagina..</h1>
-                    <p>Esta é uma página de exemplo simples com um layout semelhante ao GitHub...
-                    </p>
+                    <p>Esta é uma página de exemplo simples com um layout semelhante ao GitHub...</p>
                     <section class="weather-widget">
                         <h3>Previsão do tempo</h3>
                         <div class="weather-info">
@@ -97,21 +93,22 @@
         </div>
     </main>
 
-
     <footer class="bg-dark text-white py-3">
         <div class="continer">
             <p>© 2023 Página estilo GitHub. Todos os direitos reservados..</p>
         </div>
     </footer>
+
+    <!-- Links dos arquivos JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Script/dark-mode.js"></script>
     <script src="Script/tempo.js"></script>
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 
-
-    <!-- Login Modal -->
+    <!-- Modal de login -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -142,6 +139,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
