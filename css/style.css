@@ -8,7 +8,15 @@
   border: 0;
   box-sizing: border-box;
 }
-
+/* Define a posição fixa do cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100; /* Define uma ordem de empilhamento para garantir que o cabeçalho apareça acima dos outros elementos */
+}
 /* Define o fundo e a cor de texto do body para branco e preto, respectivamente */
 body {
   background-color: white;
