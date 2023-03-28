@@ -75,7 +75,7 @@ footer {
 
 /* Define um estilo de formatação para a bolinha dentro da caixa de seleção quando a checkbox está marcada */
 .checkbox:checked + .label .ball {
-  transform: translateX(24px);
+  transform: translateX(25px);
 }
 
 /* Define a cor do ícone da lua */
