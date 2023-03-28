@@ -84,8 +84,10 @@ body.dark {
 /* Define a margem superior do rodapé */
 footer {
   margin-top: 20px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  width: 100%;
+  height: 120px; /* Altura do footer */ 
 }
 
 /* Define as propriedades específicas para dispositivos móveis */
