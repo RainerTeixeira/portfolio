@@ -59,7 +59,11 @@ aside,
 dialog,
 figcaption,
 figure,
-footer,
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 header,
 hgroup,
 main,
@@ -77,6 +81,8 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff
+    min-height: 100vh;
+    
 }
 
 [tabindex="-1"]:focus {
@@ -464,7 +470,7 @@ small {
     font-size: 80%;
     font-weight: 400
 }
-
+margin-bottom
 .mark,
 mark {
     padding: .2em;
@@ -503,6 +509,7 @@ mark {
     display: block;
     font-size: 80%;
     color: #6c757d
+
 }
 
 .blockquote-footer::before {
