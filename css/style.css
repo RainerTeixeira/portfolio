@@ -84,7 +84,7 @@ body.dark {
 /* Define a margem superior do rodapé */
 footer {
   margin-top: 20px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
 }
 
