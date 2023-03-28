@@ -86,6 +86,15 @@ footer {
   margin-top: 20px;
 }
 
+/* Define as propriedades específicas para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
 .button-group {
   display: flex;
   align-items: center;
