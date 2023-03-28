@@ -59,7 +59,11 @@ aside,
 dialog,
 figcaption,
 figure,
-footer,
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 header,
 hgroup,
 main,
