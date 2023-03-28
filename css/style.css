@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 /* Define as propriedades básicas para todos os elementos do HTML */
-  {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,65 +10,15 @@
 }
 
 /* Define o fundo e a cor de texto do body para branco e preto, respectivamente */
-body,
-{
-background-color: white;
-color: black;
+body {
+  background-color: white;
+  color: black;
 }
 
 /* Define o fundo e a cor de texto do body quando a classe "dark" é aplicada */
 body.dark {
   background-color: black;
   color: white;
-}
-
-/* Esconde a checkbox e define sua posição como absoluta */
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-/* Define um estilo de formatação para a caixa de seleção e seu respectivo rótulo */
-.label {
-  background-color: #111;
-  border-radius: 50px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  position: relative;
-  height: 26px;
-  width: 50px;
-  transform: scale(1.5);
-}
-
-/* Define um estilo de formatação para a bolinha dentro da caixa de seleção */
-.label .ball {
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: 22px;
-  width: 22px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
-}
-
-/* Define um estilo de formatação para a bolinha dentro da caixa de seleção quando a checkbox está marcada */
-.checkbox:checked+.label .ball {
-  transform: translateX(24px);
-}
-
-/* Define a cor do ícone da lua */
-.fa-moon {
-  color: #f1c40f;
-}
-
-/* Define a cor do ícone do sol */
-.fa-sun {
-  color: #f39c12;
 }
 
 /* Define a margem superior da navegação */
@@ -83,7 +33,59 @@ body.dark {
 
 /* Define a margem superior do rodapé */
 footer {
-  margin-top: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Esconde a checkbox e define sua posição como absoluta */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Define um estilo de formatação para a caixa de seleção e seu respectivo rótulo */
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #111;
+  transform: scale(1.5);
+}
+
+/* Define um estilo de formatação para a bolinha dentro da caixa de seleção */
+.label .ball {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+/* Define um estilo de formatação para a bolinha dentro da caixa de seleção quando a checkbox está marcada */
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+/* Define a cor do ícone da lua */
+.fa-moon {
+  color: #f1c40f;
+}
+
+/* Define a cor do ícone do sol */
+.fa-sun {
+  color: #f39c12;
 }
 
 .button-group {
@@ -95,4 +97,3 @@ footer {
 .modal-dialog {
   color: #000;
 }
-
