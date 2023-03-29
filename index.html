@@ -5,12 +5,13 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Definição da codificação de caracteres da página -->
-    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para permitir a exibição de caracteres especiais -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Descrição da página para motores de busca -->
     <meta name="description" content="Página de exemplo com um layout semelhante ao GitHub.">
-    <!-- Escala de visualização da página para dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define as configurações de visualização para dispositivos móveis -->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
     <!-- Título da página exibido na aba do navegador -->
     <title>Rainer Teixeira Page</title>
     <!-- Ícone exibido na aba do navegador -->
@@ -19,8 +20,12 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Arquivo CSS personalizado -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Meta tag para permitir que a página seja exibida como um aplicativo em tela cheia no Safari -->
+    <!-- Permite que a página seja executada em modo de aplicativo em dispositivos iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Define a cor da barra de status no modo de aplicativo iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Define a cor do tema da página -->
+    <meta name="theme-color" content="#000000">
     <!-- Folha de estilo CSS para modo de leitura -->
     <link rel="stylesheet" href="css/read-mode.css" media="read-mode">
 </head>
@@ -75,7 +80,7 @@
                         </label>
                     </div>
                 </div>
-                
+
 
             </div>
         </nav>
