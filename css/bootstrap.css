@@ -81,7 +81,8 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff min-height: 100vh;
+    background-color: #fff;
+    min-height: 100vh
 
 }
 
