@@ -83,7 +83,6 @@ body {
     text-align: left;
     background-color: #fff;
     min-height: 100vh
-
 }
 
 [tabindex="-1"]:focus {
@@ -292,7 +291,8 @@ select {
 [type=submit],
 button,
 html [type=button] {
-    -webkit-appearance: button
+    -webkit-appearance: button;
+    appearance: button;
 }
 
 [type=button]::-moz-focus-inner,
@@ -313,8 +313,11 @@ input[type=date],
 input[type=datetime-local],
 input[type=month],
 input[type=time] {
-    -webkit-appearance: listbox
+    -webkit-appearance: listbox;
+    appearance: listbox;
+    /* valor padrão para compatibilidade */
 }
+
 
 textarea {
     overflow: auto;
@@ -351,7 +354,8 @@ progress {
 
 [type=search] {
     outline-offset: -2px;
-    -webkit-appearance: none
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 [type=search]::-webkit-search-cancel-button,
@@ -498,18 +502,18 @@ mark {
 
 .initialism {
     font-size: 90%;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .blockquote {
     margin-bottom: 1rem;
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
 
 .blockquote-footer {
     display: block;
     font-size: 80%;
-    color: #6c757d
+    color: #6c757d;
 }
 
 .blockquote-footer::before {
@@ -5863,8 +5867,10 @@ button.close {
     padding: 0;
     background-color: transparent;
     border: 0;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+    appearance: none;
 }
+
 
 .modal-open {
     overflow: hidden
