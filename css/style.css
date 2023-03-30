@@ -111,3 +111,10 @@ footer {
   left: 0;
   right: 0;
 }
+
+.fa-search:before {
+  content: "\f002";
+  font-family: "FontAwesome";
+}
+
+
