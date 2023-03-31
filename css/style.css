@@ -112,9 +112,25 @@ footer {
   right: 0;
 }
 
-.fa-search:before {
-  content: "\f002";
-  font-family: "FontAwesome";
+
+
+  /* Posiciona a lupa à direita em telas grandes */
+  @media (min-width: 992px) {
+    .search-icon {
+      float: right;
+      margin-left: 10px;
+    }
+  }
+/* Posiciona a lupa à direita em telas pequenas */
+@media (max-width: 991px) {
+  .search-icon {
+    position: fixed;
+    float: right;
+    margin-left: 10px;
+    right: 10px;
+    margin: 0;
+  }
 }
+
 
 
