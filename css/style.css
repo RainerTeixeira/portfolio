@@ -100,27 +100,27 @@ header, footer {
   gap: 10px;
 }
 
-.modal-dialog {
-  color: #000;
+/* Define o estilo do menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Define a margem superior do rodapé */
-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
+/* Define o estilo dos itens do menu */
+.menu li {
+  list-style: none;
+  margin-right: 20px;
 }
 
-
-
-  /* Posiciona a lupa à direita em telas grandes */
-  @media (min-width: 992px) {
-    .search-icon {
-      float: right;
-      margin-left: 10px;
-    }
+/* Posiciona a lupa à direita em telas grandes */
+@media (min-width: 992px) {
+  .search-icon {
+    float: right;
+    margin-left: 10px;
   }
+}
+
 /* Posiciona a lupa à direita em telas pequenas */
 @media (max-width: 991px) {
   .search-icon {
