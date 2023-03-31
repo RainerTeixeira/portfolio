@@ -1,91 +1,73 @@
-<!-- Declaração do tipo de documento -->
 <!DOCTYPE html>
-
-<!-- Abertura da tag html -->
 <html lang="pt-br">
-
 <head>
-    <!-- Define a codificação de caracteres como UTF-8 para permitir a exibição de caracteres especiais -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Descrição da página para motores de busca -->
+    <meta charset="UTF-8">
     <meta name="description" content="Página de exemplo com um layout semelhante ao GitHub.">
-    <!-- Define as configurações de visualização para dispositivos móveis -->
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    <!-- Título da página exibido na aba do navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
     <title>Rainer Teixeira Page</title>
-    <!-- Ícone exibido na aba do navegador -->
     <link rel="shortcut icon" href="img/favicon.png" />
-    <!-- Arquivo CSS do framework Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <!-- Arquivo CSS personalizado -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Permite que a página seja executada em modo de aplicativo em dispositivos iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Define a cor da barra de status no modo de aplicativo iOS -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Define a cor do tema da página -->
     <meta name="theme-color" content="#000000">
-    <!-- Folha de estilo CSS para modo de leitura -->
     <link rel="stylesheet" href="css/read-mode.css" media="read-mode">
 </head>
-
 <body>
-    <!-- Cabeçalho da página -->
     <header class="bg-dark text-white">
-       <!-- Barra de navegação -->
-       <nav class="navbar navbar-expand-lg navbar-dark container">
-          <!-- Nome da página no centro -->
+        <!-- Barra de navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+          <!-- Logo centralizada -->
           <a class="navbar-brand mx-auto" href="#">Rainer Teixeira</a>
-          <!-- Botão de menu para dispositivos móveis -->
+          <!-- Botão para expandir a barra de navegação em telas pequenas -->
           <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarNav"
-             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
-                     
           <!-- Itens da barra de navegação -->
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav">
-                <li class="nav-item">
-                   <a class="nav-link" href="#">Dashboard</a>
-                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#">Repositórios</a>
-                </li>
-                <li class="nav-item">
-                   <a class="nav-link" href="#">Requisições pull</a>
-                </li>
-                <li class="nav-item">
-                   <a class="nav-link" href="#">Problemas</a>
-                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#">Marketplace</a>
-                </li>
-               <li class="nav-item">
-                   <a class="nav-link" href="#">Explorar</a>
-                </li>
-           </ul>
-           
-             <!-- Botões na barra de navegação -->
-           <div class="ml-auto button-group d-flex align-items-center">
-                <!-- Botão de login com modal de login -->
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal">
-                Login
-                </button>
-
-             <!-- Modo claro/escuro -->
-             <div class="form-check ml-auto">
-                <input type="checkbox" class="checkbox" id="chk" />
-                <label class="label" for="chk">
-                   <i class="fas fa-moon"></i>
-                   <i class="fas fa-sun"></i>
-                   <div class="ball"></div>
-                </label>
-             </div>
-         </div>
-       </nav>
-    </header>
-
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <!-- Item "Início" -->
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Início</a>
+              </li>
+              <!-- Item "Projetos" -->
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-laptop-code" style="font-size: 18px;"></i> Projetos</a>
+              </li>
+              <!-- Item "Sobre mim" -->
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-user-tie" style="font-size: 18px;"></i> Sobre mim</a>
+              </li>
+              <!-- Item "Contato" -->
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-comments" style="font-size: 18px;"></i> Contato</a>
+              </li>
+              <!-- Item "Blog" -->
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-blog" style="font-size: 18px;"></i> Blog</a>
+              </li>
+            </ul>
+            <!-- Botão de pesquisa e botão de login -->
+            <div class="d-flex align-items-center justify-content-center ml-3">
+              <i class="fa fa-search fa-2x search-icon"></i>
+              <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#loginModal">
+                <i class="fas fa-user" style="font-size: 18px;"></i>
+              </a>
+            </div>
+            <!-- Botão para alternar o tema claro/escuro -->
+            <div class="form-check ml-auto mr-3">
+              <input type="checkbox" class="checkbox" id="chk" />
+              <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
 
 
 
@@ -113,6 +95,8 @@
                     </nav>
 
                 </aside>
+
+
                 <section class="col-md-9">
                     <!-- Título e introdução -->
                     <h1>Bem vindo a minha pagina..</h1>
@@ -162,6 +146,10 @@
 
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-/sT00Er3QeM2w6UfXQ5iIdaHk/iofpAHJoMYYaC60pGhJwqF9gV8aqwY0aE8StjB"
+        crossorigin="anonymous"></script>
 
     <!-- Incluindo jQuery e Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -184,7 +172,6 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-
                 <!-- Cabeçalho do modal -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalLabel">Login</h5>
@@ -193,8 +180,6 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-
-
                 <!-- Corpo do modal -->
                 <div class="modal-body">
                     <form>
@@ -209,7 +194,6 @@
                         </div>
                     </form>
                 </div>
-
                 <!-- Rodapé do modal -->
                 <div class="modal-footer">
                     <!-- Botão de fechar modal -->
