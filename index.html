@@ -18,59 +18,47 @@
 
 <body>
     <header class="bg-dark text-white">
-        <!-- Barra de navegação -->
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-            <!-- Logo centralizada -->
-            <a class="navbar-brand mx-auto" href="index.html">Rainer Teixeira</a>
-            <!-- Botão para expandir a barra de navegação em telas pequenas -->
-            <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Itens da barra de navegação -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <!-- Item "Projetos" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="projetos.html"><i class="fas fa-laptop-code fa-lg"></i> Projetos</a>
-                    </li>
-                    <!-- Item "Sobre mim" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html"><i class="fas fa-user-tie fa-lg"></i> Sobre mim</a>
-                    </li>
-                    <!-- Item "Hobbies" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="hobbies.html"><i class="fas fa-gamepad fa-lg"></i> Hobbies</a>
-                    </li>
-                    <!-- Item "Contato" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html"><i class="fas fa-comments fa-lg"></i> Contato</a>
-                    </li>
-                    <!-- Item "Blog" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html"><i class="fas fa-blog fa-lg"></i> Blog</a>
-                    </li>
-                </ul>
-                <!-- Botão de pesquisa e botão de login -->
-                <div class="d-flex align-items-center justify-content-center ml-3">
-                    <i class="fa fa-search search-icon"></i>
-                    <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#loginModal">
-                        <i class="fas fa-user fa-lg"></i>
-                    </a>
-                </div>
-                <!-- Botão para alternar o tema claro/escuro -->
-                <div class="form-check ml-auto mr-3">
-                    <input type="checkbox" class="checkbox" id="chk" />
-                    <label class="label" for="chk">
-                        <i class="fas fa-moon fa-lg"></i>
-                        <i class="fas fa-sun fa-lg"></i>
-                        <div class="ball"></div>
-                    </label>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark container justify-content-center">
+          <a class="navbar-brand" href="index.html">Rainer Teixeira</a>
+          <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="projetos.html"><i class="fas fa-laptop-code fa-lg"></i> Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html"><i class="fas fa-user-tie fa-lg"></i> Sobre mim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hobbies.html"><i class="fas fa-gamepad fa-lg"></i> Hobbies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html"><i class="fas fa-comments fa-lg"></i> Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html"><i class="fas fa-blog fa-lg"></i> Blog</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-center ml-3">
+              <i class="fa fa-search search-icon"></i>
+              <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#loginModal">
+                <i class="fas fa-user fa-lg"></i>
+              </a>
             </div>
+            <div class="form-check ml-auto mr-3">
+              <input type="checkbox" class="checkbox" id="chk" />
+              <label class="label" for="chk">
+                <i class="fas fa-moon fa-lg"></i>
+                <i class="fas fa-sun fa-lg"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </div>
         </nav>
-    </header>
-
+      </header>
+      
 
 
 
