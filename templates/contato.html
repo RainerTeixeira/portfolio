@@ -12,50 +12,8 @@
 </head>
 
 <body>
-    <header class="bg-dark text-white">
-        <nav class="navbar navbar-expand-lg navbar-dark container">
-            <a class="navbar-brand" href="#">Rainer Teixeira</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <!-- Item "Projetos" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="projetos.html"><i class="fas fa-laptop-code fa-lg"></i> Projetos</a>
-                    </li>
-                    <!-- Item "Sobre mim" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre.html"><i class="fas fa-user-tie fa-lg"></i> Sobre mim</a>
-                    </li>
-                    <!-- Item "Hobbies" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="hobbies.html"><i class="fas fa-gamepad fa-lg"></i> Hobbies</a>
-                    </li>
-                    <!-- Item "Contato" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contato.html"><i class="fas fa-comments fa-lg"></i> Contato</a>
-                    </li>
-                    <!-- Item "Blog" -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html"><i class="fas fa-blog fa-lg"></i> Blog</a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center ml-auto button-group">
+    <div id="header-placeholder"></div>
 
-                    <div class="form-check">
-                        <input type="checkbox" class="checkbox" id="chk" />
-                        <label class="label" for="chk">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="container">
             <div class="row">
@@ -128,29 +86,62 @@
             </div>
         </div>
     </main>
-    <footer class="bg-dark text-white py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Entre em contato</h3>
-                    <p>Email: raineroliveira94@hotmail.com</p>
-                    <p>Telefone: (24) 99913-7382</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Direitos autorais</h3>
-                    <p>&copy; 2023 Página estilo GitHub. Todos os direitos reservados..</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Links dos arquivos JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <div id="footer-placeholder"></div>
+
+    <!-- Incluindo jQuery antes de qualquer script que dependa dele -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <!-- Incluindo Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Scripts personalizados -->
     <script src="Script/dark-mode.js"></script>
+    <script src="Script/tempo.js"></script>
     <script src="Script/login.js"></script>
+    <script src="Script/read-mode.js"></script>
+    <script src="Script/pesquisar.js"></script>
+
+    <script>
+        $(function () {
+            var footer = $('#footer-placeholder');
+            var body = $('body');
+            var windowHeight = $(window).height();
+            var bodyHeight = body.height();
+
+            if (bodyHeight < windowHeight) {
+                footer.css({
+                    position: 'absolute',
+                    bottom: '0',
+                    width: '100%'
+                });
+            } else {
+                footer.css({
+                    position: 'static'
+                });
+            }
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    footer.css({
+                        position: 'static'
+                    }).fadeIn();
+                } else {
+                    footer.fadeOut();
+                }
+            });
+        });
+
+    </script>
+
+    <!-- Ícones do Font Awesome -->
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
 
     <!-- Modal de login -->
@@ -158,12 +149,15 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <!-- Cabeçalho do modal -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <!-- Botão de fechar modal -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <!-- Corpo do modal -->
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
@@ -177,22 +171,19 @@
                         </div>
                     </form>
                 </div>
+                <!-- Rodapé do modal -->
                 <div class="modal-footer">
+                    <!-- Botão de fechar modal -->
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <!-- Botão de enviar formulário de login -->
                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal"
-                        id="btn-entrar">
-                        Login
+                        id="entrar-btn">
+                        Entrar
                     </button>
-
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal" id="btn-entrar">
-                        Login
-                    </button>
-                    
-
                 </div>
             </div>
         </div>
-    </div>
+
 </body>
 
 </html>

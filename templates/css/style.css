@@ -1,0 +1,144 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* Propriedades básicas para todos os elementos HTML */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+/* Layout principal */
+main {
+  position: relative;
+  min-height: calc(100vh - 100px);
+  top: 50px;
+}
+
+/* Adicionando margens e preenchimentos */
+.container {
+  padding: 20px;
+}
+
+/* Ajustando a largura das colunas */
+.profile {
+  width: 100%;
+}
+
+/* Interruptor (toggle switch) */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+/* Ícones */
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+/* Tipografia */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+  height: 100px;
+  background-color: #343a40;
+  color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+.footer-image {
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Botão Topo */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #f8f9fa;
+  color: #007bff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#topBtn:hover {
+  background-color: #007bff;
+  color: #f8f9fa;
+}
+
+/* Estilos personalizados para o cabeçalho */
+.custom-navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-nav-item {
+  margin: 0 10px;
+}
+
+.navbar-brand-custom {
+  font-weight: bold;
+}
