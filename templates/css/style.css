@@ -27,11 +27,6 @@ main {
   padding: 20px;
 }
 
-/* Ajustando a largura das colunas */
-.profile {
-  width: 100%;
-}
-
 /* Interruptor (toggle switch) */
 .checkbox {
   opacity: 0;
@@ -141,4 +136,9 @@ footer {
 
 .navbar-brand-custom {
   font-weight: bold;
+}
+
+.user-toggle-switch {
+  display: flex;
+  align-items: center;
 }
