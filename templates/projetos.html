@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página de exemplo com um layout semelhante ao GitHub.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainer Teixeira Page</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+                <section class="col-md-9">
+                    <h1>PROJETOS</h1>
+                    <p>Esta e uma area restrita</p>
+
+                </section>
+
+
+
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+
+    <!-- Incluindo jQuery antes de qualquer script que dependa dele -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+
+    <!-- Incluindo Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="Script/dark-mode.js"></script>
+    <script src="Script/tempo.js"></script>
+    <script src="Script/login.js"></script>
+    <script src="Script/read-mode.js"></script>
+    <script src="Script/pesquisar.js"></script>
+
+    <script>
+        $(function () {
+            var footer = $('#footer-placeholder');
+            var body = $('body');
+            var windowHeight = $(window).height();
+            var bodyHeight = body.height();
+
+            if (bodyHeight < windowHeight) {
+                footer.css({
+                    position: 'absolute',
+                    bottom: '0',
+                    width: '100%'
+                });
+            } else {
+                footer.css({
+                    position: 'static'
+                });
+            }
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                    footer.css({
+                        position: 'static'
+                    }).fadeIn();
+                } else {
+                    footer.fadeOut();
+                }
+            });
+        });
+
+    </script>
+
+    <!-- Ícones do Font Awesome -->
+    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+
+    <!-- Modal de login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Cabeçalho do modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <!-- Botão de fechar modal -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Corpo do modal -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword"
+                                placeholder="Digite sua senha">
+                        </div>
+                    </form>
+                </div>
+                <!-- Rodapé do modal -->
+                <div class="modal-footer">
+                    <!-- Botão de fechar modal -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <!-- Botão de enviar formulário de login -->
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginModal"
+                        id="entrar-btn">
+                        Entrar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
